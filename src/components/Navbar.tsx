@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ShoppingBag } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -48,11 +48,11 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
           <div className="relative">
-            <ShoppingBag 
-              className="text-bw-orange h-8 w-8 transition-transform hover:scale-110" 
-              strokeWidth={2.5}
+            <img 
+              src="/lovable-uploads/431b80be-36d0-4357-9bec-f7e54e3429c1.png" 
+              alt="BiteyWitey Logo" 
+              className="h-12 w-12 transition-transform hover:scale-110" 
             />
-            <span className="absolute -top-1 -right-1 bg-bw-black text-white text-xs font-bold px-1.5 py-0.5 rounded-full">BW</span>
           </div>
           <span className="text-xl sm:text-2xl font-display font-bold">
             <span className="text-bw-black">Bitey</span>

@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { ShoppingBag, Instagram, Facebook, Twitter, ChevronRight } from "lucide-react";
+import { Instagram, Facebook, Twitter, ChevronRight } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,11 +49,11 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <div className="relative">
-                <ShoppingBag 
-                  className="text-bw-orange h-8 w-8" 
-                  strokeWidth={2.5}
+                <img 
+                  src="/lovable-uploads/431b80be-36d0-4357-9bec-f7e54e3429c1.png" 
+                  alt="BiteyWitey Logo" 
+                  className="h-10 w-10"
                 />
-                <span className="absolute -top-1 -right-1 bg-white text-bw-black text-xs font-bold px-1.5 py-0.5 rounded-full">BW</span>
               </div>
               <span className="text-2xl font-display font-bold">
                 <span className="text-white">Bitey</span>

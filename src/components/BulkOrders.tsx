@@ -67,7 +67,7 @@ const BulkOrders = () => {
                 className="bg-bw-orange hover:bg-bw-orange-dark text-white rounded-full px-6 shadow-lg hover:shadow-xl hover-lift"
                 asChild
               >
-                <a href="tel:+123456789">
+                <a href="tel:+916291569512">
                   Call to Order
                 </a>
               </Button>
@@ -77,7 +77,7 @@ const BulkOrders = () => {
                 className="rounded-full border-bw-black/20 bg-white text-bw-black hover:bg-bw-orange/10 hover:text-bw-orange hover:border-bw-orange/20 px-6 shadow-sm hover-lift"
                 asChild
               >
-                <a href="mailto:orders@biteywitey.com">
+                <a href="mailto:biteywitey.official@gmail.com">
                   Email Us
                 </a>
               </Button>
@@ -100,7 +100,7 @@ const BulkOrders = () => {
               <div className="absolute bottom-6 left-6 right-6 glass-card p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="font-bold text-xl">Custom Catering</h3>
-                  <div className="text-bw-orange font-bold">From $199</div>
+                  <div className="text-bw-orange font-bold">From ₹5000</div>
                 </div>
                 <p className="text-sm text-bw-black/70 mb-4">
                   Custom packages tailored to your event needs with additional sides, desserts, and beverages.
@@ -109,7 +109,7 @@ const BulkOrders = () => {
                   className="w-full bg-bw-orange hover:bg-bw-orange-dark text-white"
                   asChild
                 >
-                  <a href="tel:+123456789">
+                  <a href="tel:+916291569512">
                     Get a Quote
                   </a>
                 </Button>

@@ -1,13 +1,14 @@
 
 import { useState, useEffect } from "react";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
     id: 1,
     name: "Priya Sharma",
     role: "Event Coordinator",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1603123853880-a92fafb7809f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "BiteyWitey's catering service was the highlight of our corporate event. The burger combos were a hit among our team members. The quality and presentation exceeded our expectations!",
     rating: 5,
     location: "Bangalore, India"
@@ -16,7 +17,7 @@ const testimonials = [
     id: 2,
     name: "Rahul Patel",
     role: "Birthday Party Host",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1618151313441-bc79b11e5090?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "I ordered sandwich platters for my son's birthday party, and they were absolutely delicious. Fresh ingredients, prompt delivery, and great customer service. Will definitely order again!",
     rating: 5,
     location: "Bangalore, India"
@@ -25,7 +26,7 @@ const testimonials = [
     id: 3,
     name: "Ananya Desai",
     role: "Office Manager",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1557053815-9e391201e0c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Our team looks forward to our monthly lunch catered by BiteyWitey. Their variety of options ensures everyone finds something they love. The ordering process is seamless, and the food is consistently excellent.",
     rating: 4,
     location: "Bangalore, India"
@@ -104,13 +105,15 @@ const Testimonials = () => {
                 
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full overflow-hidden">
-                      <img 
-                        src={currentTestimonial.image} 
+                    <Avatar className="w-14 h-14">
+                      <AvatarImage
+                        src={currentTestimonial.image}
                         alt={currentTestimonial.name}
-                        className="w-full h-full object-cover"
                       />
-                    </div>
+                      <AvatarFallback className="bg-bw-orange-light text-white">
+                        {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
                     <div>
                       <h3 className="font-bold text-lg">{currentTestimonial.name}</h3>
                       <p className="text-white/60 text-sm">{currentTestimonial.role}</p>

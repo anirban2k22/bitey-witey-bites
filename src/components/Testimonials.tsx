@@ -5,7 +5,7 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Priya Sharma",
     role: "Event Coordinator",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "BiteyWitey's catering service was the highlight of our corporate event. The burger combos were a hit among our team members. The quality and presentation exceeded our expectations!",
@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Michael Rodriguez",
+    name: "Rahul Patel",
     role: "Birthday Party Host",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "I ordered sandwich platters for my son's birthday party, and they were absolutely delicious. Fresh ingredients, prompt delivery, and great customer service. Will definitely order again!",
@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Emily Chen",
+    name: "Ananya Desai",
     role: "Office Manager",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Our team looks forward to our monthly lunch catered by BiteyWitey. Their variety of options ensures everyone finds something they love. The ordering process is seamless, and the food is consistently excellent.",

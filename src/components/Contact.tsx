@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, Clock, Instagram, Facebook, Twitter } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -9,22 +9,15 @@ const Contact = () => {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
       description: "For orders and inquiries",
-      action: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      action: "+91 6291569512",
+      link: "tel:+916291569512",
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
       description: "For quotes and bulk orders",
-      action: "orders@biteywitey.com",
-      link: "mailto:orders@biteywitey.com",
-    },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Visit Us",
-      description: "Our main location",
-      action: "123 Foodie St, Flavor City",
-      link: "https://maps.google.com",
+      action: "biteywitey.official@gmail.com",
+      link: "mailto:biteywitey.official@gmail.com",
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -57,7 +50,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
           {contactInfo.map((info, index) => (
             <ContactCard key={index} info={info} />
           ))}

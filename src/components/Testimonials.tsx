@@ -10,6 +10,7 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "BiteyWitey's catering service was the highlight of our corporate event. The burger combos were a hit among our team members. The quality and presentation exceeded our expectations!",
     rating: 5,
+    location: "Bangalore, India"
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "I ordered sandwich platters for my son's birthday party, and they were absolutely delicious. Fresh ingredients, prompt delivery, and great customer service. Will definitely order again!",
     rating: 5,
+    location: "Bangalore, India"
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     quote: "Our team looks forward to our monthly lunch catered by BiteyWitey. Their variety of options ensures everyone finds something they love. The ordering process is seamless, and the food is consistently excellent.",
     rating: 4,
+    location: "Bangalore, India"
   },
 ];
 
@@ -111,6 +114,7 @@ const Testimonials = () => {
                     <div>
                       <h3 className="font-bold text-lg">{currentTestimonial.name}</h3>
                       <p className="text-white/60 text-sm">{currentTestimonial.role}</p>
+                      <p className="text-white/60 text-xs">{currentTestimonial.location}</p>
                     </div>
                   </div>
                   

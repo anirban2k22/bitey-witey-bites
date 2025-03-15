@@ -22,7 +22,7 @@ const BulkOrders = () => {
     {
       icon: <Truck className="w-10 h-10 text-bw-orange" />,
       title: "Free Delivery",
-      description: "Complimentary delivery for orders over $100",
+      description: "Complimentary delivery for orders over ₹4000",
     },
   ];
 

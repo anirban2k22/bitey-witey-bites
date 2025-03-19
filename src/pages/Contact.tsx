@@ -34,7 +34,8 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // FormSubmit will handle the actual email sending
+    // We're simulating the submission response here
     setTimeout(() => {
       console.log("Form submitted:", formData);
       toast({
@@ -93,8 +94,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-lg mb-1">Phone</h3>
-                        <p className="text-bw-black/70 mb-1">Main: +1 (555) 123-4567</p>
-                        <p className="text-bw-black/70">Bulk Orders: +1 (555) 765-4321</p>
+                        <p className="text-bw-black/70 mb-1">Main: +91 6291569512</p>
+                        <p className="text-bw-black/70">Bulk Orders: +91 6386342758</p>
                       </div>
                     </div>
                     
@@ -104,8 +105,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-lg mb-1">Email</h3>
-                        <p className="text-bw-black/70 mb-1">General: info@biteywitey.com</p>
-                        <p className="text-bw-black/70">Orders: orders@biteywitey.com</p>
+                        <p className="text-bw-black/70 mb-1">General: biteywitey.official@gmail.com</p>
                       </div>
                     </div>
                     
@@ -116,7 +116,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium text-lg mb-1">Address</h3>
                         <p className="text-bw-black/70">123 Burger Street, Foodville,</p>
-                        <p className="text-bw-black/70">Culinary County, CC 98765</p>
+                        <p className="text-bw-black/70">Delhi, India, 110001</p>
                       </div>
                     </div>
                     
@@ -139,7 +139,7 @@ const Contact = () => {
                       For immediate assistance or to place a same-day order, please call our direct line:
                     </p>
                     <a 
-                      href="tel:+15551234567" 
+                      href="tel:+916291569512" 
                       className="bg-bw-orange hover:bg-bw-orange-dark text-white px-6 py-3 rounded-full font-medium inline-flex items-center justify-center transition-colors"
                     >
                       <Phone className="mr-2 h-4 w-4" />
@@ -152,7 +152,16 @@ const Contact = () => {
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
                   
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form 
+                    action="https://formsubmit.co/biteywitey.official@gmail.com" 
+                    method="POST"
+                    className="space-y-5"
+                  >
+                    <input type="hidden" name="_next" value={window.location.href} />
+                    <input type="hidden" name="_subject" value="New BiteyWitey Website Inquiry" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium mb-1">
@@ -194,7 +203,8 @@ const Contact = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="(555) 123-4567"
+                          placeholder="+91 9876543210"
+                          required
                         />
                       </div>
                       
@@ -257,7 +267,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-8 text-center">Find Us</h2>
               <div className="rounded-xl overflow-hidden shadow-sm h-[400px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059353029!2d-74.25986763304465!3d40.69714941512383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667827323266!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5534991010613!2d77.20720071509353!3d28.55231358244995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8955b362a708ed5!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1667827323266!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -283,17 +293,17 @@ const Contact = () => {
                 
                 <FaqItem 
                   question="Do you offer vegetarian options?"
-                  answer="Yes! We have a variety of vegetarian options including our popular Veggie Burger and Mediterranean Veggie Sandwich. Most of our sides are also vegetarian-friendly."
+                  answer="Yes! We have a variety of vegetarian options including our popular Veg Burger and Mediterranean Veggie Sandwich. Most of our sides are also vegetarian-friendly."
                 />
                 
                 <FaqItem 
                   question="What is your delivery area?"
-                  answer="We currently deliver within a 15-mile radius of our location. For orders outside this area, please contact us directly to discuss arrangements."
+                  answer="We currently deliver within a 15-km radius of our location in Delhi. For orders outside this area, please contact us directly to discuss arrangements."
                 />
                 
                 <FaqItem 
                   question="Is there a minimum order for delivery?"
-                  answer="Yes, we require a minimum order of $50 for delivery. Orders over $100 qualify for free delivery within our standard delivery area."
+                  answer="Yes, we require a minimum order of ₹500 for delivery. Orders over ₹2000 qualify for free delivery within our standard delivery area."
                 />
                 
                 <FaqItem 

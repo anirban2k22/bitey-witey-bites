@@ -11,7 +11,7 @@ const burgerCombos = [
     id: 1,
     name: "Classic Burger Combo",
     description: "Juicy beef patty with lettuce, tomato, cheese, and our secret sauce.",
-    price: "$49.99",
+    price: "₹399",
     servings: "6-8 people",
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     popular: true,
@@ -20,25 +20,25 @@ const burgerCombos = [
     id: 2,
     name: "Double Trouble Combo",
     description: "Double beef patty with double cheese, bacon, and all the fixings.",
-    price: "$59.99",
+    price: "₹499",
     servings: "8-10 people",
     image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     popular: false,
   },
   {
     id: 3,
-    name: "Veggie Delight Combo",
+    name: "Veg Delight Combo",
     description: "Plant-based patty with avocado, roasted peppers, and vegan aioli.",
-    price: "$45.99",
+    price: "₹349",
     servings: "6-8 people",
-    image: "https://images.unsplash.com/photo-1550317138-10000687a72b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    popular: false,
+    image: "public/lovable-uploads/117e2177-1345-4047-8517-a0088f629761.png",
+    popular: true,
   },
   {
     id: 4,
-    name: "Chicken Burger Fiesta",
-    description: "Crispy chicken patty with slaw, pickles, and spicy mayo.",
-    price: "$54.99",
+    name: "Paneer Burger Fiesta",
+    description: "Crispy paneer patty with cheese balls, fresh juice and fries.",
+    price: "₹449",
     servings: "8-10 people",
     image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     popular: true,
@@ -48,27 +48,27 @@ const burgerCombos = [
 const sandwichCombos = [
   {
     id: 1,
-    name: "Club Sandwich Platter",
-    description: "Triple-decker sandwiches with turkey, bacon, lettuce, and tomato.",
-    price: "$44.99",
+    name: "Grilled Sandwich Platter",
+    description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread.",
+    price: "₹299",
     servings: "8-10 people",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "public/lovable-uploads/6cab8b38-b696-4e1e-be1d-7a275e3f087b.png",
     popular: true,
   },
   {
     id: 2,
     name: "Mediterranean Wraps",
-    description: "Grilled chicken, hummus, feta, and mixed greens in tortilla wraps.",
-    price: "$39.99",
+    description: "Grilled paneer, hummus, feta, and mixed greens in tortilla wraps.",
+    price: "₹349",
     servings: "6-8 people",
     image: "https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     popular: false,
   },
   {
     id: 3,
-    name: "Italian Sub Collection",
-    description: "Assorted Italian cold cuts with provolone cheese and Italian dressing.",
-    price: "$49.99",
+    name: "Indian Special Collection",
+    description: "Assorted Indian spiced fillings with paneer and chutney dressing.",
+    price: "₹399",
     servings: "8-10 people",
     image: "https://images.unsplash.com/photo-1509722747041-616f39b57569?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     popular: true,
@@ -76,8 +76,8 @@ const sandwichCombos = [
   {
     id: 4,
     name: "Veggie Sandwich Medley",
-    description: "Grilled vegetables, hummus, and mixed greens on artisan bread.",
-    price: "$42.99",
+    description: "Grilled vegetables, hummus, and mixed greens on artisan bread starting at just ₹99.",
+    price: "₹299",
     servings: "6-8 people",
     image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     popular: false,
@@ -115,7 +115,7 @@ const MenuItem = ({ item }: { item: typeof burgerCombos[0] }) => {
               className="w-full bg-white text-bw-black hover:bg-bw-orange hover:text-white transition-colors"
               asChild
             >
-              <a href="tel:+123456789" className="flex items-center justify-center gap-2">
+              <a href="tel:+916291569512" className="flex items-center justify-center gap-2">
                 <ShoppingBag className="h-4 w-4" />
                 Order Now
               </a>

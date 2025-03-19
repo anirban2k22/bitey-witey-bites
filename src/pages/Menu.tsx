@@ -27,7 +27,7 @@ const Menu = () => {
       id: 1,
       name: "Classic Burger Combo",
       description: "Juicy beef patty with lettuce, tomato, and our secret sauce. Served with fries and a drink.",
-      price: 12.99,
+      price: 399,
       image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80",
       tags: ["Bestseller", "Combo"],
       isPopular: true
@@ -36,7 +36,7 @@ const Menu = () => {
       id: 2,
       name: "Double Cheese Burger",
       description: "Double beef patty with extra cheese, caramelized onions, and bacon. Served with fries and a drink.",
-      price: 15.99,
+      price: 449,
       image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
       tags: ["Premium", "Combo"]
     },
@@ -44,8 +44,8 @@ const Menu = () => {
       id: 3,
       name: "Veggie Burger Combo",
       description: "Plant-based patty with fresh veggies, avocado, and vegan mayo. Served with sweet potato fries.",
-      price: 13.99,
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
+      price: 349,
+      image: "public/lovable-uploads/117e2177-1345-4047-8517-a0088f629761.png",
       tags: ["Vegetarian", "Combo"],
       isVegetarian: true
     },
@@ -53,15 +53,15 @@ const Menu = () => {
       id: 4,
       name: "Spicy Chicken Burger",
       description: "Crispy chicken fillet with spicy sauce, coleslaw, and pickles. Served with fries and a drink.",
-      price: 14.99,
+      price: 379,
       image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1644&q=80",
       tags: ["Spicy", "Combo"]
     },
     {
       id: 5,
-      name: "BBQ Bacon Burger",
-      description: "Grilled beef patty with BBQ sauce, crispy bacon, and cheddar cheese. Served with onion rings.",
-      price: 16.99,
+      name: "BBQ Paneer Burger",
+      description: "Grilled paneer patty with BBQ sauce, crispy veggies, and cheddar cheese. Served with onion rings.",
+      price: 429,
       image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80",
       tags: ["Premium", "Combo"],
       isNew: true
@@ -70,7 +70,7 @@ const Menu = () => {
       id: 6,
       name: "Mushroom Swiss Burger",
       description: "Beef patty topped with sautéed mushrooms and melted Swiss cheese. Served with truffle fries.",
-      price: 15.99,
+      price: 399,
       image: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80",
       tags: ["Premium", "Combo"]
     }
@@ -79,27 +79,27 @@ const Menu = () => {
   const sandwiches: MenuItem[] = [
     {
       id: 7,
-      name: "Club Sandwich",
-      description: "Triple-decker sandwich with grilled chicken, bacon, lettuce, tomato, and mayo. Served with chips.",
-      price: 11.99,
-      image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1773&q=80",
+      name: "Grilled Sandwich Platter",
+      description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread. Starting at just ₹99.",
+      price: 299,
+      image: "public/lovable-uploads/6cab8b38-b696-4e1e-be1d-7a275e3f087b.png",
       tags: ["Classic", "Combo"],
       isPopular: true
     },
     {
       id: 8,
-      name: "Grilled Cheese Deluxe",
+      name: "Cheese Griller Deluxe",
       description: "Four-cheese blend between buttery toasted bread with tomato soup for dipping.",
-      price: 9.99,
+      price: 249,
       image: "https://images.unsplash.com/photo-1528736235302-52922df5c122?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80",
       tags: ["Vegetarian", "Combo"],
       isVegetarian: true
     },
     {
       id: 9,
-      name: "Philly Cheesesteak",
-      description: "Thinly sliced beef with melted provolone, sautéed onions and peppers on a hoagie roll.",
-      price: 13.99,
+      name: "Paneer Tikka Sandwich",
+      description: "Spiced paneer tikka with melted cheese, mint chutney on a toasted bread.",
+      price: 299,
       image: "https://images.unsplash.com/photo-1630767623396-f9f70be53a23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
       tags: ["Premium", "Combo"]
     },
@@ -107,27 +107,27 @@ const Menu = () => {
       id: 10,
       name: "Mediterranean Veggie",
       description: "Hummus, roasted vegetables, feta cheese, and olive tapenade on focaccia bread.",
-      price: 10.99,
+      price: 279,
       image: "https://images.unsplash.com/photo-1540914124281-342587941389?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       tags: ["Vegetarian", "Healthy"],
       isVegetarian: true
     },
     {
       id: 11,
-      name: "Cuban Sandwich",
-      description: "Roasted pork, ham, Swiss cheese, pickles, and mustard pressed between Cuban bread.",
-      price: 12.99,
+      name: "Bombay Sandwich",
+      description: "Classic Mumbai-style sandwich with potato, cucumber, tomato, mint chutney and cheese.",
+      price: 219,
       image: "https://images.unsplash.com/photo-1625938144327-cf744b099fd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
       tags: ["Specialty", "Combo"],
       isNew: true
     },
     {
       id: 12,
-      name: "Turkey Avocado BLT",
-      description: "Sliced turkey, bacon, lettuce, tomato, and avocado with herb aioli on multigrain bread.",
-      price: 11.99,
+      name: "Tandoori Chicken Sandwich",
+      description: "Grilled tandoori chicken, mint mayo, lettuce, tomato, and onions on fresh baked bread.",
+      price: 319,
       image: "https://images.unsplash.com/photo-1619860705236-45bdb14b5a7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-      tags: ["Healthy", "Combo"]
+      tags: ["Spicy", "Combo"]
     }
   ];
 
@@ -135,8 +135,8 @@ const Menu = () => {
     {
       id: 13,
       name: "Loaded Fries",
-      description: "Crispy fries topped with cheese sauce, bacon bits, and green onions.",
-      price: 6.99,
+      description: "Crispy fries topped with cheese sauce, herbs, and green onions.",
+      price: 199,
       image: "https://images.unsplash.com/photo-1639744093378-d41e9e49c585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       tags: ["Popular", "Shareable"],
       isPopular: true
@@ -144,8 +144,8 @@ const Menu = () => {
     {
       id: 14,
       name: "Onion Rings",
-      description: "Beer-battered onion rings served with spicy aioli dipping sauce.",
-      price: 5.99,
+      description: "Crispy onion rings served with spicy mayo dipping sauce.",
+      price: 149,
       image: "https://images.unsplash.com/photo-1639024471283-05009ffe2f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
       tags: ["Classic", "Vegetarian"],
       isVegetarian: true
@@ -154,7 +154,7 @@ const Menu = () => {
       id: 15,
       name: "Coleslaw",
       description: "Fresh cabbage and carrots in a creamy dressing.",
-      price: 3.99,
+      price: 99,
       image: "https://images.unsplash.com/photo-1625938144327-cf744b099fd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
       tags: ["Side", "Vegetarian"],
       isVegetarian: true
@@ -163,7 +163,7 @@ const Menu = () => {
       id: 16,
       name: "Sweet Potato Fries",
       description: "Crispy sweet potato fries with chipotle mayo.",
-      price: 5.99,
+      price: 179,
       image: "https://images.unsplash.com/photo-1644252211108-8c82daf9aa2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
       tags: ["Healthy", "Vegetarian"],
       isVegetarian: true
@@ -275,7 +275,7 @@ const Menu = () => {
                       </div>
                       <div>
                         <h3 className="font-medium">Free Delivery</h3>
-                        <p className="text-white/70 text-sm">For orders over $100 within city limits</p>
+                        <p className="text-white/70 text-sm">For orders over ₹2000 within city limits</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -290,7 +290,7 @@ const Menu = () => {
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="tel:+15551234567" 
+                      href="tel:+916291569512" 
                       className="bg-bw-orange hover:bg-bw-orange-dark text-white px-6 py-3 rounded-full font-medium inline-flex items-center justify-center transition-colors"
                     >
                       Call to Order
@@ -355,7 +355,7 @@ const MenuCard = ({ item }: { item: MenuItem }) => {
       <div className="p-5">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-lg font-bold">{item.name}</h3>
-          <span className="text-bw-orange font-bold">${item.price.toFixed(2)}</span>
+          <span className="text-bw-orange font-bold">₹{item.price}</span>
         </div>
         <p className="text-bw-black/70 text-sm mb-4">{item.description}</p>
         {item.tags && (

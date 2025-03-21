@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Heart, ShoppingBag, ArrowRight, ArrowLeft } from "lucide-react";
+import { Heart, ShoppingBag, Phone, Mail } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { 
   Carousel,
@@ -17,38 +17,50 @@ import {
 const burgerCombos = [
   {
     id: 1,
-    name: "Classic Burger Combo",
-    description: "Juicy beef patty with lettuce, tomato, cheese, and our secret sauce.",
-    price: "₹399",
-    servings: "6-8 people",
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    name: "Veg Burger Combo",
+    description: "Customizable veggie burger with fresh juice and french fries or veg cutlet.",
+    price: "₹99",
+    servings: "1 person",
+    image: "public/lovable-uploads/75a42142-5113-4cd3-9ac0-b4dc4560461a.png",
     popular: true,
   },
   {
     id: 2,
-    name: "Double Trouble Combo",
-    description: "Double beef patty with double cheese, bacon, and all the fixings.",
-    price: "₹499",
-    servings: "8-10 people",
-    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    name: "Paneer Burger Combo",
+    description: "Customizable paneer burger with fresh juice and french fries or cheese balls.",
+    price: "₹129",
+    servings: "1 person",
+    image: "public/lovable-uploads/75a42142-5113-4cd3-9ac0-b4dc4560461a.png",
+    popular: true,
+  },
+];
+
+const indianCombos = [
+  {
+    id: 1,
+    name: "Jeera Rice & Paneer Butter Masala",
+    description: "Customizable jeera rice with rich and creamy paneer butter masala.",
+    price: "₹199",
+    servings: "1-2 people",
+    image: "public/lovable-uploads/8ee50dae-52f6-4c6d-849f-689be91e6bfa.png",
+    popular: true,
+  },
+  {
+    id: 2,
+    name: "Rajma Rice Combo",
+    description: "Plain rice (customizable) with rajma, achar, and butter.",
+    price: "₹199",
+    servings: "1-2 people",
+    image: "public/lovable-uploads/698aafc6-5753-4668-92f3-ac8ee53a7316.png",
     popular: false,
   },
   {
     id: 3,
-    name: "Veg Delight Combo",
-    description: "Plant-based patty with avocado, roasted peppers, and vegan aioli.",
-    price: "₹349",
-    servings: "6-8 people",
-    image: "public/lovable-uploads/117e2177-1345-4047-8517-a0088f629761.png",
-    popular: true,
-  },
-  {
-    id: 4,
-    name: "Paneer Burger Fiesta",
-    description: "Crispy paneer patty with cheese balls, fresh juice and fries.",
-    price: "₹449",
-    servings: "8-10 people",
-    image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    name: "Aloo Paratha Combo",
+    description: "Delicious aloo paratha served with lassi and achar.",
+    price: "₹149",
+    servings: "1 person",
+    image: "public/lovable-uploads/a376ffa1-5736-42fc-9a9b-936bed378b29.png",
     popular: true,
   },
 ];
@@ -58,37 +70,10 @@ const sandwichCombos = [
     id: 1,
     name: "Grilled Sandwich Platter",
     description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread.",
-    price: "₹299",
-    servings: "8-10 people",
-    image: "public/lovable-uploads/6cab8b38-b696-4e1e-be1d-7a275e3f087b.png",
+    price: "₹99",
+    servings: "1 person",
+    image: "public/lovable-uploads/e7c8070f-d021-4ed2-b7c2-038abd9a1069.png",
     popular: true,
-  },
-  {
-    id: 2,
-    name: "Mediterranean Wraps",
-    description: "Grilled paneer, hummus, feta, and mixed greens in tortilla wraps.",
-    price: "₹349",
-    servings: "6-8 people",
-    image: "https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    popular: false,
-  },
-  {
-    id: 3,
-    name: "Indian Special Collection",
-    description: "Assorted Indian spiced fillings with paneer and chutney dressing.",
-    price: "₹399",
-    servings: "8-10 people",
-    image: "https://images.unsplash.com/photo-1509722747041-616f39b57569?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    popular: true,
-  },
-  {
-    id: 4,
-    name: "Veggie Sandwich Medley",
-    description: "Grilled vegetables, hummus, and mixed greens on artisan bread starting at just ₹99.",
-    price: "₹299",
-    servings: "6-8 people",
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    popular: false,
   },
 ];
 
@@ -96,24 +81,38 @@ const sandwichCombos = [
 const newSpecialCombos = [
   {
     id: 1,
-    name: "Summer Special Burger",
-    description: "Limited time offer with fresh mango salsa and mint chutney.",
-    price: "₹449",
-    image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    name: "Jeera Rice & Paneer Butter Masala",
+    description: "Customizable jeera rice with rich and creamy paneer butter masala.",
+    price: "₹199",
+    image: "public/lovable-uploads/8ee50dae-52f6-4c6d-849f-689be91e6bfa.png",
   },
   {
     id: 2,
-    name: "Tandoori Paneer Wrap",
-    description: "Spicy tandoori paneer with veggies in a whole wheat wrap.",
-    price: "₹399",
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    name: "Rajma Rice Combo",
+    description: "Plain rice (customizable) with rajma, achar, and butter.",
+    price: "₹199",
+    image: "public/lovable-uploads/698aafc6-5753-4668-92f3-ac8ee53a7316.png",
   },
   {
     id: 3,
-    name: "Combo Family Pack",
-    description: "Perfect for family gatherings - includes 4 burgers, 4 sandwiches, and sides.",
-    price: "₹1299",
-    image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    name: "Aloo Paratha Combo",
+    description: "Delicious aloo paratha served with lassi and achar.",
+    price: "₹149",
+    image: "public/lovable-uploads/a376ffa1-5736-42fc-9a9b-936bed378b29.png",
+  },
+  {
+    id: 4,
+    name: "Veg Burger Combo",
+    description: "Customizable veggie burger with fresh juice and french fries or veg cutlet.",
+    price: "₹99",
+    image: "public/lovable-uploads/75a42142-5113-4cd3-9ac0-b4dc4560461a.png",
+  },
+  {
+    id: 5,
+    name: "Grilled Sandwich",
+    description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread.",
+    price: "₹99",
+    image: "public/lovable-uploads/e7c8070f-d021-4ed2-b7c2-038abd9a1069.png",
   },
 ];
 
@@ -285,10 +284,10 @@ const Menu = () => {
         {/* New Combos Carousel */}
         <div className="mb-12">
           <div className="inline-block px-3 py-1 mb-4 rounded-full bg-bw-orange/10 text-bw-orange-dark text-sm font-medium">
-            New Special Offers
+            Featured Combos
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            Try Our Latest Creations
+            Get Foods for Your Family Gatherings
           </h2>
           
           <Carousel
@@ -321,7 +320,7 @@ const Menu = () => {
                         </div>
                       </div>
                       <div className="absolute top-4 right-4 bg-bw-orange text-white text-xs font-bold uppercase px-2 py-1 rounded-full">
-                        New
+                        Special
                       </div>
                     </div>
                     <div className="p-4 flex justify-between items-center">
@@ -331,7 +330,6 @@ const Menu = () => {
                         variant="outline"
                         className="border-bw-orange text-bw-orange hover:bg-bw-orange hover:text-white"
                         onClick={() => {
-                          // In a real implementation, you'd open the cart modal for this item
                           window.location.href = "/menu";
                         }}
                       >
@@ -358,6 +356,20 @@ const Menu = () => {
             Perfect for office gatherings, parties, or any event that needs great food.
             We specialize in bulk orders that everyone will love.
           </p>
+          <div className="flex justify-center gap-4 mt-4">
+            <a href="tel:+916291569512" className="inline-flex items-center text-bw-orange hover:text-bw-orange-dark">
+              <Phone className="h-4 w-4 mr-1" />
+              +91 6291569512
+            </a>
+            <a href="tel:+916386342758" className="inline-flex items-center text-bw-orange hover:text-bw-orange-dark">
+              <Phone className="h-4 w-4 mr-1" />
+              +91 6386342758
+            </a>
+            <a href="mailto:biteywitey.official@gmail.com" className="inline-flex items-center text-bw-orange hover:text-bw-orange-dark">
+              <Mail className="h-4 w-4 mr-1" />
+              Email Us
+            </a>
+          </div>
         </div>
 
         <Tabs defaultValue="burgers" className="w-full animate-fade-in">
@@ -368,6 +380,12 @@ const Menu = () => {
                 className="rounded-full px-6 py-2 data-[state=active]:bg-bw-orange data-[state=active]:text-white"
               >
                 Burger Combos
+              </TabsTrigger>
+              <TabsTrigger 
+                value="indian" 
+                className="rounded-full px-6 py-2 data-[state=active]:bg-bw-orange data-[state=active]:text-white"
+              >
+                Indian Combos
               </TabsTrigger>
               <TabsTrigger 
                 value="sandwiches" 
@@ -382,6 +400,14 @@ const Menu = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {burgerCombos.map((burger) => (
                 <MenuItem key={burger.id} item={burger} />
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="indian" className="mt-2 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {indianCombos.map((item) => (
+                <MenuItem key={item.id} item={item} />
               ))}
             </div>
           </TabsContent>

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -77,14 +77,24 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Call Button */}
-        <div className="hidden md:block">
+        {/* Call & Email Button */}
+        <div className="hidden md:flex gap-2">
           <Button
-            variant="default"
-            className="bg-bw-orange hover:bg-bw-orange-dark text-white rounded-full px-6 flex items-center gap-2"
+            variant="outline"
+            className="rounded-full px-4 border-bw-orange/40 text-bw-orange hover:bg-bw-orange/10"
             asChild
           >
-            <a href="tel:+123456789">
+            <a href="mailto:biteywitey.official@gmail.com">
+              <Mail className="h-4 w-4 mr-2" />
+              <span className="font-medium">Email Us</span>
+            </a>
+          </Button>
+          <Button
+            variant="default"
+            className="bg-bw-orange hover:bg-bw-orange-dark text-white rounded-full px-4 flex items-center gap-2"
+            asChild
+          >
+            <a href="tel:+916291569512">
               <Phone className="h-4 w-4" />
               <span className="font-medium">Order Now</span>
             </a>
@@ -127,16 +137,28 @@ const Navbar = () => {
             </Link>
           ))}
           
-          <Button
-            variant="default"
-            className="bg-bw-orange hover:bg-bw-orange-dark text-white rounded-lg mt-2 flex items-center gap-2 justify-center"
-            asChild
-          >
-            <a href="tel:+123456789">
-              <Phone className="h-4 w-4" />
-              <span className="font-medium">Order Now</span>
-            </a>
-          </Button>
+          <div className="flex flex-col gap-2 mt-2">
+            <Button
+              variant="outline"
+              className="justify-center rounded-lg border-bw-orange/40 text-bw-orange hover:bg-bw-orange/10"
+              asChild
+            >
+              <a href="mailto:biteywitey.official@gmail.com">
+                <Mail className="h-4 w-4 mr-2" />
+                <span className="font-medium">Email Us</span>
+              </a>
+            </Button>
+            <Button
+              variant="default"
+              className="bg-bw-orange hover:bg-bw-orange-dark text-white rounded-lg flex items-center gap-2 justify-center"
+              asChild
+            >
+              <a href="tel:+916291569512">
+                <Phone className="h-4 w-4" />
+                <span className="font-medium">Order Now</span>
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </header>

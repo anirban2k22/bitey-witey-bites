@@ -36,9 +36,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Instagram className="h-5 w-5" />, name: "Instagram", link: "https://instagram.com" },
-    { icon: <Facebook className="h-5 w-5" />, name: "Facebook", link: "https://facebook.com" },
-    { icon: <Twitter className="h-5 w-5" />, name: "Twitter", link: "https://twitter.com" },
+    { icon: <Instagram className="h-5 w-5" />, name: "Instagram", link: "https://www.instagram.com/biteywitey.club/" },
+    { icon: <Facebook className="h-5 w-5" />, name: "LinkedIn", link: "https://www.linkedin.com/company/biteywitey/?viewAsMember=true" },
+    { icon: <Twitter className="h-5 w-5" />, name: "Twitter", link: "https://x.com/BiteyWitey" },
   ];
 
   return (
@@ -106,12 +106,12 @@ const Footer = () => {
             © {currentYear} BiteyWitey. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
-            <a href="tel:+15551234567" className="text-white/70 hover:text-bw-orange text-sm">
-              +1 (555) 123-4567
+            <a href="tel:+916291569512" className="text-white/70 hover:text-bw-orange text-sm">
+              +91 6291 569 512
             </a>
             <span className="text-white/30">|</span>
-            <a href="mailto:orders@biteywitey.com" className="text-white/70 hover:text-bw-orange text-sm">
-              orders@biteywitey.com
+            <a href="mailto:biteywitey.official@gmail.com" className="text-white/70 hover:text-bw-orange text-sm">
+              biteywitey.official@gmail.com
             </a>
           </div>
         </div>

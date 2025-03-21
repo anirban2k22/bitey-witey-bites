@@ -2,7 +2,7 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { MapPin, Clock, Award, Users } from "lucide-react";
+import { MapPin, Clock, Award, Users, Mail, Phone } from "lucide-react";
 
 const About = () => {
   return (
@@ -57,9 +57,62 @@ const About = () => {
               </div>
             </div>
           </section>
+          
+          {/* Founder Section */}
+          <section className="bg-bw-cream py-16">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-12">Meet Our Founder</h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="relative">
+                    <div className="absolute -top-4 -right-4 bg-bw-orange/20 w-full h-full rounded-2xl"></div>
+                    <img 
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80" 
+                      alt="BiteyWitey Founder" 
+                      className="rounded-2xl shadow-lg w-full h-auto object-cover relative z-10"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">Rahul Sharma</h3>
+                  <p className="text-bw-orange font-medium mb-4">Founder & CEO</p>
+                  
+                  <p className="text-bw-black/80 mb-4">
+                    With over 15 years of experience in the food industry, Rahul's passion for creating delicious, affordable food for events stems from his own experiences organizing college gatherings.
+                  </p>
+                  
+                  <p className="text-bw-black/80 mb-6">
+                    "I started BiteyWitey because I saw a gap in the market for high-quality, bulk food options that didn't break the bank. Our mission is to make every gathering memorable with delicious food that brings people together."
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a 
+                      href="mailto:founder@biteywitey.com" 
+                      className="flex items-center gap-2 text-bw-black/70 hover:text-bw-orange"
+                    >
+                      <Mail className="h-4 w-4" />
+                      founder@biteywitey.com
+                    </a>
+                    <a 
+                      href="https://www.linkedin.com/company/biteywitey/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-bw-black/70 hover:text-bw-orange"
+                    >
+                      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      Connect on LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Why Choose Us */}
-          <section className="bg-bw-cream py-16">
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-12">Why Choose BiteyWitey</h2>
               
@@ -100,9 +153,34 @@ const About = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-3">Convenient Locations</h3>
                   <p className="text-bw-black/70">
-                    With multiple service points, we can cater to events across the city.
+                    With our Bengaluru location, we can cater to events across the city.
                   </p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Map Section */}
+          <section className="py-12 bg-bw-orange/5">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Find Us in Bengaluru</h2>
+                <p className="text-bw-black/70 max-w-2xl mx-auto">
+                  Visit our location in Bengaluru to discuss your order in person or enjoy our delicious food on the spot.
+                </p>
+              </div>
+              
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <iframe 
+                  title="BiteyWitey Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1720056548086!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="450" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </section>
@@ -116,16 +194,18 @@ const About = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
+                  href="tel:+916291569512" 
                   className="bg-bw-orange hover:bg-bw-orange-dark text-white px-8 py-3 rounded-full font-medium inline-flex items-center justify-center transition-colors"
                 >
-                  Contact Us
+                  <Phone className="h-4 w-4 mr-2" />
+                  Call to Order
                 </a>
                 <a 
-                  href="/menu" 
+                  href="mailto:biteywitey.official@gmail.com" 
                   className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-medium inline-flex items-center justify-center transition-colors"
                 >
-                  View Our Menu
+                  <Mail className="h-4 w-4 mr-2" />
+                  Email Us
                 </a>
               </div>
             </div>

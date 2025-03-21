@@ -43,147 +43,67 @@ const Menu = () => {
   const burgers: MenuItem[] = [
     {
       id: 1,
-      name: "Classic Burger Combo",
-      description: "Juicy beef patty with lettuce, tomato, and our secret sauce. Served with fries and a drink.",
-      price: 399,
-      image: "https://images.unsplash.com/photo-1550317138-10000687a72b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      name: "Veg Burger Combo",
+      description: "Customizable veggie burger with fresh juice and french fries or veg cutlet.",
+      price: 99,
+      image: "/lovable-uploads/75a42142-5113-4cd3-9ac0-b4dc4560461a.png",
       tags: ["Bestseller", "Combo"],
-      isPopular: true
-    },
-    {
-      id: 2,
-      name: "Double Cheese Burger",
-      description: "Double beef patty with extra cheese, caramelized onions, and bacon. Served with fries and a drink.",
-      price: 449,
-      image: "https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Premium", "Combo"]
-    },
-    {
-      id: 3,
-      name: "Veggie Burger Combo",
-      description: "Plant-based patty with fresh veggies, avocado, and vegan mayo. Served with sweet potato fries.",
-      price: 349,
-      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Vegetarian", "Combo"],
+      isPopular: true,
       isVegetarian: true
     },
     {
-      id: 4,
-      name: "Spicy Chicken Burger",
-      description: "Crispy chicken fillet with spicy sauce, coleslaw, and pickles. Served with fries and a drink.",
-      price: 379,
-      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Spicy", "Combo"]
-    },
-    {
-      id: 5,
-      name: "BBQ Paneer Burger",
-      description: "Grilled paneer patty with BBQ sauce, crispy veggies, and cheddar cheese. Served with onion rings.",
-      price: 429,
-      image: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      id: 2,
+      name: "Paneer Burger Combo",
+      description: "Customizable paneer burger with fresh juice and french fries or cheese balls.",
+      price: 129,
+      image: "/lovable-uploads/75a42142-5113-4cd3-9ac0-b4dc4560461a.png",
       tags: ["Premium", "Combo"],
+      isVegetarian: true,
       isNew: true
-    },
-    {
-      id: 6,
-      name: "Mushroom Swiss Burger",
-      description: "Beef patty topped with sautéed mushrooms and melted Swiss cheese. Served with truffle fries.",
-      price: 399,
-      image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Premium", "Combo"]
     }
   ];
 
   const sandwiches: MenuItem[] = [
     {
-      id: 7,
+      id: 3,
       name: "Grilled Sandwich Platter",
-      description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread. Starting at just ₹99.",
-      price: 299,
-      image: "https://images.unsplash.com/photo-1539252554935-80918f560c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread.",
+      price: 99,
+      image: "/lovable-uploads/e7c8070f-d021-4ed2-b7c2-038abd9a1069.png",
       tags: ["Classic", "Combo"],
-      isPopular: true
-    },
-    {
-      id: 8,
-      name: "Cheese Griller Deluxe",
-      description: "Four-cheese blend between buttery toasted bread with tomato soup for dipping.",
-      price: 249,
-      image: "https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Vegetarian", "Combo"],
+      isPopular: true,
       isVegetarian: true
-    },
-    {
-      id: 9,
-      name: "Paneer Tikka Sandwich",
-      description: "Spiced paneer tikka with melted cheese, mint chutney on a toasted bread.",
-      price: 299,
-      image: "https://images.unsplash.com/photo-1559054663-e8d23213f55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Premium", "Combo"]
-    },
-    {
-      id: 10,
-      name: "Mediterranean Veggie",
-      description: "Hummus, roasted vegetables, feta cheese, and olive tapenade on focaccia bread.",
-      price: 279,
-      image: "https://images.unsplash.com/photo-1509722747041-616f39b57569?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Vegetarian", "Healthy"],
-      isVegetarian: true
-    },
-    {
-      id: 11,
-      name: "Bombay Sandwich",
-      description: "Classic Mumbai-style sandwich with potato, cucumber, tomato, mint chutney and cheese.",
-      price: 219,
-      image: "https://images.unsplash.com/photo-1528736235302-52922df5c122?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Specialty", "Combo"],
-      isNew: true
-    },
-    {
-      id: 12,
-      name: "Tandoori Chicken Sandwich",
-      description: "Grilled tandoori chicken, mint mayo, lettuce, tomato, and onions on fresh baked bread.",
-      price: 319,
-      image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Spicy", "Combo"]
     }
   ];
 
-  const sides: MenuItem[] = [
+  const indianCombos: MenuItem[] = [
     {
-      id: 13,
-      name: "Loaded Fries",
-      description: "Crispy fries topped with cheese sauce, herbs, and green onions.",
+      id: 4,
+      name: "Jeera Rice & Paneer Butter Masala",
+      description: "Customizable jeera rice with rich and creamy paneer butter masala.",
       price: 199,
-      image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Popular", "Shareable"],
-      isPopular: true
+      image: "/lovable-uploads/8ee50dae-52f6-4c6d-849f-689be91e6bfa.png",
+      tags: ["Premium", "Combo"],
+      isPopular: true,
+      isVegetarian: true
     },
     {
-      id: 14,
-      name: "Onion Rings",
-      description: "Crispy onion rings served with spicy mayo dipping sauce.",
-      price: 149,
-      image: "https://images.unsplash.com/photo-1581349485608-9469f2a5ca0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      id: 5,
+      name: "Rajma Rice Combo",
+      description: "Plain rice (customizable) with rajma, achar, and butter.",
+      price: 199,
+      image: "/lovable-uploads/698aafc6-5753-4668-92f3-ac8ee53a7316.png",
       tags: ["Classic", "Vegetarian"],
       isVegetarian: true
     },
     {
-      id: 15,
-      name: "Coleslaw",
-      description: "Fresh cabbage and carrots in a creamy dressing.",
-      price: 99,
-      image: "https://images.unsplash.com/photo-1637486349561-64a93b16ecfb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Side", "Vegetarian"],
-      isVegetarian: true
-    },
-    {
-      id: 16,
-      name: "Sweet Potato Fries",
-      description: "Crispy sweet potato fries with chipotle mayo.",
-      price: 179,
-      image: "https://images.unsplash.com/photo-1644252211108-8c82daf9aa2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Healthy", "Vegetarian"],
+      id: 6,
+      name: "Aloo Paratha Combo",
+      description: "Delicious aloo paratha served with lassi and achar.",
+      price: 149,
+      image: "/lovable-uploads/a376ffa1-5736-42fc-9a9b-936bed378b29.png",
+      tags: ["Classic", "Breakfast"],
+      isNew: true,
       isVegetarian: true
     }
   ];
@@ -194,8 +114,8 @@ const Menu = () => {
         return burgers;
       case "sandwiches":
         return sandwiches;
-      case "sides":
-        return sides;
+      case "indian":
+        return indianCombos;
       default:
         return burgers;
     }
@@ -246,7 +166,7 @@ const Menu = () => {
                   <TabsList className="bg-muted/50">
                     <TabsTrigger value="burgers" className="text-base px-6">Burgers</TabsTrigger>
                     <TabsTrigger value="sandwiches" className="text-base px-6">Sandwiches</TabsTrigger>
-                    <TabsTrigger value="sides" className="text-base px-6">Sides</TabsTrigger>
+                    <TabsTrigger value="indian" className="text-base px-6">Indian Combos</TabsTrigger>
                   </TabsList>
                 </div>
 
@@ -266,9 +186,9 @@ const Menu = () => {
                   </div>
                 </TabsContent>
 
-                <TabsContent value="sides" className="space-y-8">
+                <TabsContent value="indian" className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {getItems("sides").map((item) => (
+                    {getItems("indian").map((item) => (
                       <MenuCard key={item.id} item={item} onOrder={handleOrderNow} />
                     ))}
                   </div>
@@ -326,8 +246,8 @@ const Menu = () => {
                 <div className="relative">
                   <div className="absolute -top-4 -right-4 bg-bw-orange/20 w-full h-full rounded-2xl"></div>
                   <img 
-                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                    alt="Bulk order of burgers and sandwiches" 
+                    src="/lovable-uploads/8ee50dae-52f6-4c6d-849f-689be91e6bfa.png" 
+                    alt="Bulk order of food" 
                     className="rounded-2xl shadow-lg w-full h-auto object-cover relative z-10"
                   />
                 </div>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -100,20 +99,6 @@ const newSpecialCombos = [
     price: "₹149",
     image: "public/lovable-uploads/a376ffa1-5736-42fc-9a9b-936bed378b29.png",
   },
-  {
-    id: 4,
-    name: "Veg Burger Combo",
-    description: "Customizable veggie burger with fresh juice and french fries or veg cutlet.",
-    price: "₹99",
-    image: "public/lovable-uploads/75a42142-5113-4cd3-9ac0-b4dc4560461a.png",
-  },
-  {
-    id: 5,
-    name: "Grilled Sandwich",
-    description: "Fresh vegetables, cheese and herbs grilled to perfection in our special bread.",
-    price: "₹99",
-    image: "public/lovable-uploads/e7c8070f-d021-4ed2-b7c2-038abd9a1069.png",
-  },
 ];
 
 const CartModal = ({ isOpen, onClose, item }: { isOpen: boolean, onClose: () => void, item: any }) => {
@@ -133,8 +118,6 @@ const CartModal = ({ isOpen, onClose, item }: { isOpen: boolean, onClose: () => 
   };
   
   const handleCheckout = () => {
-    // In a real app, you would store cart data in context/state
-    // For now, we'll just navigate to a "payment" page
     onClose();
     navigate("/contact");
   };

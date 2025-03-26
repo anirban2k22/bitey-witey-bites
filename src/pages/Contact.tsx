@@ -105,7 +105,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-lg mb-1">Email</h3>
-                        <p className="text-bw-black/70 mb-1">General: anirbandas1616@gmail.com</p>
+                        <p className="text-bw-black/70 mb-1">General: biteywitey.official@gmail.com</p>
                       </div>
                     </div>
                     
@@ -142,9 +142,10 @@ const Contact = () => {
                   <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
                   
                   <form 
-                    action="https://formsubmit.co/anirbandas1616@gmail.com" 
+                    action="https://formsubmit.co/biteywitey.official@gmail.com" 
                     method="POST"
                     className="space-y-5"
+                    onSubmit={handleSubmit}
                   >
                     <input type="hidden" name="_next" value={window.location.href} />
                     <input type="hidden" name="_subject" value="New BiteyWitey Website Inquiry" />

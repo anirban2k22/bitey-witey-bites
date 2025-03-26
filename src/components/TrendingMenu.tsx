@@ -7,9 +7,10 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ShoppingBag, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const trendingItems = [
   {
@@ -45,25 +46,100 @@ interface CartItem {
   price: string;
   image: string;
   rating: number;
+  quantity?: number;
 }
 
 const TrendingMenu = () => {
+  const { toast } = useToast();
   const [showCart, setShowCart] = useState(false);
   const [selectedItem, setSelectedItem] = useState<CartItem | null>(null);
-  const [quantity, setQuantity] = useState(15);
+  const [quantity, setQuantity] = useState(10); // Changed to minimum 10
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if user is logged in
+    const email = localStorage.getItem("userEmail");
+    setIsLoggedIn(!!email);
+    setUserEmail(email);
+  }, []);
 
   const handleOrderClick = (item: CartItem) => {
     setSelectedItem(item);
     setShowCart(true);
-    setQuantity(15); // Reset quantity to minimum
+    setQuantity(10); // Reset quantity to minimum 10
   };
 
   const handleCheckout = () => {
-    // Here you would normally process the order
+    if (!selectedItem) return;
+    
+    // Check if user is logged in
+    if (!isLoggedIn) {
+      // Save item to temporary storage and redirect to login
+      localStorage.setItem("tempCartItem", JSON.stringify({
+        ...selectedItem,
+        quantity
+      }));
+      navigate("/checkout");
+      return;
+    }
+
+    // Save the order to localStorage
+    const cartItem = {
+      ...selectedItem,
+      quantity
+    };
+    
+    // Generate a timestamp-based ID
+    const orderId = `order_${Date.now()}`;
+    
+    // Create order object
+    const order = {
+      id: orderId,
+      date: new Date().toLocaleString(),
+      items: [cartItem],
+      status: "pending" as const,
+      total: `₹${parseInt(selectedItem.price.replace(/[^\d]/g, '')) * quantity}`
+    };
+    
+    // Get existing orders
+    const existingOrdersJson = localStorage.getItem(`orders_${userEmail}`);
+    const existingOrders = existingOrdersJson ? JSON.parse(existingOrdersJson) : [];
+    
+    // Add new order
+    const updatedOrders = [order, ...existingOrders];
+    
+    // Save back to localStorage
+    localStorage.setItem(`orders_${userEmail}`, JSON.stringify(updatedOrders));
+    
+    // Notify user
+    toast({
+      title: "Order placed!",
+      description: "Your order has been sent to BiteyWitey.",
+    });
+    
+    // Close cart modal
     setShowCart(false);
-    // For now, just navigate to the contact page
-    navigate("/contact");
+    
+    // Send order details to BiteyWitey via email
+    const emailBody = {
+      orderDetails: JSON.stringify(order),
+      userEmail: userEmail,
+      _subject: `New Order #${orderId.slice(-6)} from BiteyWitey Website`,
+    };
+    
+    // Use FormSubmit to send the email
+    fetch("https://formsubmit.co/biteywitey.official@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(emailBody),
+    }).catch(err => {
+      console.error("Error sending order email:", err);
+    });
   };
 
   return (
@@ -167,20 +243,20 @@ const TrendingMenu = () => {
             </div>
             
             <div className="mb-6">
-              <label className="text-sm font-medium mb-2 block">Quantity (Minimum 15)</label>
+              <label className="text-sm font-medium mb-2 block">Quantity (Minimum 10)</label>
               <div className="flex items-center">
                 <button 
-                  onClick={() => quantity > 15 && setQuantity(quantity - 1)}
+                  onClick={() => quantity > 10 && setQuantity(quantity - 1)}
                   className="border rounded-l-lg px-3 py-2 hover:bg-gray-100"
-                  disabled={quantity <= 15}
+                  disabled={quantity <= 10}
                 >
                   -
                 </button>
                 <input 
                   type="number" 
-                  min="15"
+                  min="10"
                   value={quantity}
-                  onChange={(e) => setQuantity(Math.max(15, parseInt(e.target.value) || 15))}
+                  onChange={(e) => setQuantity(Math.max(10, parseInt(e.target.value) || 10))}
                   className="border-y w-16 py-2 text-center"
                 />
                 <button 

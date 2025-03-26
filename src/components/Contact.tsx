@@ -28,7 +28,7 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Using Email JS to send the email
+      // Using FormSubmit to send the email
       const response = await fetch("https://formsubmit.co/biteywitey.official@gmail.com", {
         method: "POST",
         headers: {
@@ -101,9 +101,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: <Instagram className="h-5 w-5" />, name: "Instagram", link: "https://instagram.com" },
-    { icon: <Facebook className="h-5 w-5" />, name: "Facebook", link: "https://facebook.com" },
-    { icon: <Twitter className="h-5 w-5" />, name: "Twitter", link: "https://twitter.com" },
+    { icon: <Instagram className="h-5 w-5" />, name: "Instagram", link: "https://www.instagram.com/biteywitey.club/" },
+    { icon: <Facebook className="h-5 w-5" />, name: "Facebook", link: "https://www.facebook.com/" },
+    { icon: <Twitter className="h-5 w-5" />, name: "Twitter", link: "https://x.com/BiteyWitey" },
   ];
 
   return (

@@ -68,18 +68,18 @@ const About = () => {
                   <div className="relative">
                     <div className="absolute -top-4 -right-4 bg-bw-orange/20 w-full h-full rounded-2xl"></div>
                     <img 
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80" 
+                      src="public/lovable-uploads/e794fa8f-5c9f-480a-9458-9cec4b449cc2.png" 
                       alt="BiteyWitey Founder" 
                       className="rounded-2xl shadow-lg w-full h-auto object-cover relative z-10"
                     />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Rahul Sharma</h3>
+                  <h3 className="text-2xl font-bold mb-2">Souhardhya Bose</h3>
                   <p className="text-bw-orange font-medium mb-4">Founder & CEO</p>
                   
                   <p className="text-bw-black/80 mb-4">
-                    With over 15 years of experience in the food industry, Rahul's passion for creating delicious, affordable food for events stems from his own experiences organizing college gatherings.
+                    With a vision to revolutionize the food delivery experience, Souhardhya founded BiteyWitey to provide high-quality, affordable bulk food options for events and gatherings.
                   </p>
                   
                   <p className="text-bw-black/80 mb-6">
@@ -88,14 +88,14 @@ const About = () => {
                   
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="mailto:founder@biteywitey.com" 
+                      href="mailto:biteywitey.official@gmail.com" 
                       className="flex items-center gap-2 text-bw-black/70 hover:text-bw-orange"
                     >
                       <Mail className="h-4 w-4" />
-                      founder@biteywitey.com
+                      biteywitey.official@gmail.com
                     </a>
                     <a 
-                      href="https://www.linkedin.com/company/biteywitey/" 
+                      href="https://www.linkedin.com/company/biteywitey/?viewAsMember=true" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-bw-black/70 hover:text-bw-orange"

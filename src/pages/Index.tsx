@@ -1,6 +1,6 @@
 
 import Hero from "../components/Hero";
-import Menu from "../components/Menu";
+import Menu from "../components/menu";
 import BulkOrders from "../components/BulkOrders";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";

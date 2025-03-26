@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Menu from "../components/menu";
 import BulkOrders from "../components/BulkOrders";
 import Testimonials from "../components/Testimonials";
-import Contact from "../components/Contact";
+import Contact from "../components/contact";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import TrendingMenu from "../components/TrendingMenu";

@@ -29,7 +29,7 @@ const Contact = () => {
     
     try {
       // Using FormSubmit to send the email
-      const response = await fetch("https://formsubmit.co/biteywitey.official@gmail.com", {
+      const response = await fetch("https://formsubmit.co/anirbandas1616@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,8 +88,8 @@ const Contact = () => {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
       description: "For quotes and bulk orders",
-      action: "biteywitey.official@gmail.com",
-      link: "mailto:biteywitey.official@gmail.com",
+      action: "anirbandas1616@gmail.com",
+      link: "mailto:anirbandas1616@gmail.com",
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -146,7 +146,7 @@ const Contact = () => {
                 Leave your details and we'll get back to you as soon as possible to discuss your requirements.
               </p>
               
-              <form className="space-y-4" onSubmit={handleSubmit} action="https://formsubmit.co/biteywitey.official@gmail.com" method="POST">
+              <form className="space-y-4" onSubmit={handleSubmit} action="https://formsubmit.co/anirbandas1616@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New enquiry from BiteyWitey website!" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />

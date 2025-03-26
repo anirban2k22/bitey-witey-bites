@@ -2,7 +2,7 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { MapPin, Clock, Award, Users, Mail, Phone } from "lucide-react";
+import { Clock, Award, Users, Mail, Phone } from "lucide-react";
 
 const About = () => {
   return (
@@ -75,11 +75,11 @@ const About = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Souhardhya Bose</h3>
+                  <h3 className="text-2xl font-bold mb-2">Anirban Das</h3>
                   <p className="text-bw-orange font-medium mb-4">Founder & CEO</p>
                   
                   <p className="text-bw-black/80 mb-4">
-                    With a vision to revolutionize the food delivery experience, Souhardhya founded BiteyWitey to provide high-quality, affordable bulk food options for events and gatherings.
+                    With a vision to revolutionize the food delivery experience, Anirban founded BiteyWitey to provide high-quality, affordable bulk food options for events and gatherings.
                   </p>
                   
                   <p className="text-bw-black/80 mb-6">
@@ -88,14 +88,14 @@ const About = () => {
                   
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="mailto:biteywitey.official@gmail.com" 
+                      href="mailto:anirbandas1616@gmail.com" 
                       className="flex items-center gap-2 text-bw-black/70 hover:text-bw-orange"
                     >
                       <Mail className="h-4 w-4" />
-                      biteywitey.official@gmail.com
+                      anirbandas1616@gmail.com
                     </a>
                     <a 
-                      href="https://www.linkedin.com/company/biteywitey/?viewAsMember=true" 
+                      href="https://www.linkedin.com/in/anirban-das-748181209/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-bw-black/70 hover:text-bw-orange"
@@ -149,38 +149,13 @@ const About = () => {
                 
                 <div className="bg-white p-6 rounded-xl shadow-sm hover-lift">
                   <div className="bg-bw-orange/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    <MapPin className="text-bw-orange h-8 w-8" />
+                    <Award className="text-bw-orange h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Convenient Locations</h3>
+                  <h3 className="text-xl font-bold mb-3">Customer Satisfaction</h3>
                   <p className="text-bw-black/70">
-                    With our Bengaluru location, we can cater to events across the city.
+                    Your satisfaction is our priority. We go the extra mile to ensure your event is a success.
                   </p>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Map Section */}
-          <section className="py-12 bg-bw-orange/5">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Find Us in Bengaluru</h2>
-                <p className="text-bw-black/70 max-w-2xl mx-auto">
-                  Visit our location in Bengaluru to discuss your order in person or enjoy our delicious food on the spot.
-                </p>
-              </div>
-              
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <iframe 
-                  title="BiteyWitey Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1720056548086!5m2!1sen!2sin" 
-                  width="100%" 
-                  height="450" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
               </div>
             </div>
           </section>
@@ -201,7 +176,7 @@ const About = () => {
                   Call to Order
                 </a>
                 <a 
-                  href="mailto:biteywitey.official@gmail.com" 
+                  href="mailto:anirbandas1616@gmail.com" 
                   className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-medium inline-flex items-center justify-center transition-colors"
                 >
                   <Mail className="h-4 w-4 mr-2" />

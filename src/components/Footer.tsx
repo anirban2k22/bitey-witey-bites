@@ -13,6 +13,7 @@ const Footer = () => {
         { name: "Menu", path: "/menu" },
         { name: "About Us", path: "/about" },
         { name: "Contact", path: "/contact" },
+        { name: "Checkout", path: "/checkout" },
       ],
     },
     {
@@ -110,8 +111,8 @@ const Footer = () => {
               +91 6291 569 512
             </a>
             <span className="text-white/30">|</span>
-            <a href="mailto:biteywitey.official@gmail.com" className="text-white/70 hover:text-bw-orange text-sm">
-              biteywitey.official@gmail.com
+            <a href="mailto:anirbandas1616@gmail.com" className="text-white/70 hover:text-bw-orange text-sm">
+              anirbandas1616@gmail.com
             </a>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Check, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Check, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -105,18 +105,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-lg mb-1">Email</h3>
-                        <p className="text-bw-black/70 mb-1">General: biteywitey.official@gmail.com</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-4">
-                      <div className="bg-bw-orange/10 p-3 rounded-full">
-                        <MapPin className="h-6 w-6 text-bw-orange" />
-                      </div>
-                      <div>
-                        <h3 className="font-medium text-lg mb-1">Address</h3>
-                        <p className="text-bw-black/70">123 Burger Street, Foodville,</p>
-                        <p className="text-bw-black/70">Delhi, India, 110001</p>
+                        <p className="text-bw-black/70 mb-1">General: anirbandas1616@gmail.com</p>
                       </div>
                     </div>
                     
@@ -153,7 +142,7 @@ const Contact = () => {
                   <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
                   
                   <form 
-                    action="https://formsubmit.co/biteywitey.official@gmail.com" 
+                    action="https://formsubmit.co/anirbandas1616@gmail.com" 
                     method="POST"
                     className="space-y-5"
                   >
@@ -261,25 +250,6 @@ const Contact = () => {
             </div>
           </section>
 
-          {/* Location Map */}
-          <section className="py-12 bg-bw-cream">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl font-bold mb-8 text-center">Find Us</h2>
-              <div className="rounded-xl overflow-hidden shadow-sm h-[400px]">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5534991010613!2d77.20720071509353!3d28.55231358244995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8955b362a708ed5!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1667827323266!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="BiteyWitey Location"
-                ></iframe>
-              </div>
-            </div>
-          </section>
-
           {/* FAQ */}
           <section className="py-16">
             <div className="container mx-auto px-4">
@@ -298,7 +268,7 @@ const Contact = () => {
                 
                 <FaqItem 
                   question="What is your delivery area?"
-                  answer="We currently deliver within a 15-km radius of our location in Delhi. For orders outside this area, please contact us directly to discuss arrangements."
+                  answer="We currently deliver across the city. For orders outside this area, please contact us directly to discuss arrangements."
                 />
                 
                 <FaqItem 

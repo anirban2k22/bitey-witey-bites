@@ -6,7 +6,8 @@ import Footer from "../components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Flame, Clock, TrendingUp, Vegan, Car, MapPin, Phone, Mail } from "lucide-react";
+import { Flame, Clock, TrendingUp, Vegan, Car, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type MenuItem = {
   id: number;
@@ -29,15 +30,13 @@ const Menu = () => {
   const handleOrderNow = (item: MenuItem) => {
     setSelectedItem(item);
     setShowCart(true);
-    setQuantity(15); // Reset quantity to minimum
+    setQuantity(10); // Reset quantity to minimum (10)
   };
 
   const handleCheckout = () => {
     // Here you would normally process the order
-    // For now, we'll just close the modal
-    setShowCart(false);
-    alert(`Order placed for ${quantity} x ${selectedItem?.name}. Total: ₹${(selectedItem?.price || 0) * quantity}`);
-    // In a real app, you would redirect to a payment page
+    // For now, we'll redirect to checkout page
+    window.location.href = '/checkout';
   };
 
   const burgers: MenuItem[] = [
@@ -235,7 +234,7 @@ const Menu = () => {
                       Call to Order
                     </a>
                     <a 
-                      href="mailto:biteywitey.official@gmail.com" 
+                      href="mailto:anirbandas1616@gmail.com" 
                       className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-medium inline-flex items-center justify-center transition-colors"
                     >
                       <Mail className="h-4 w-4 mr-2" />
@@ -250,81 +249,6 @@ const Menu = () => {
                     alt="Bulk order of food" 
                     className="rounded-2xl shadow-lg w-full h-auto object-cover relative z-10"
                   />
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          {/* Location with Map */}
-          <section className="py-16 bg-bw-cream">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Visit Us in Bengaluru</h2>
-                <p className="text-bw-black/70 max-w-2xl mx-auto">
-                  Drop by our location to enjoy our food or discuss your bulk order requirements in person.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                <div className="lg:col-span-2">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1720056548086!5m2!1sen!2sin"
-                      width="100%" 
-                      height="450" 
-                      style={{ border: 0 }} 
-                      allowFullScreen
-                      loading="lazy"
-                      title="BiteyWitey Location"
-                      referrerPolicy="no-referrer-when-downgrade">
-                    </iframe>
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <h3 className="text-xl font-bold mb-4">BiteyWitey Bengaluru</h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-start gap-3">
-                        <div className="bg-bw-orange/10 p-1 rounded-full mt-1">
-                          <MapPin className="h-5 w-5 text-bw-orange" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium">Address</h4>
-                          <p className="text-bw-black/70 text-sm">123 Food Street, Koramangala, Bengaluru, Karnataka 560034</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="bg-bw-orange/10 p-1 rounded-full mt-1">
-                          <Clock className="h-5 w-5 text-bw-orange" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium">Opening Hours</h4>
-                          <p className="text-bw-black/70 text-sm">Monday-Saturday: 10:00 AM - 10:00 PM</p>
-                          <p className="text-bw-black/70 text-sm">Sunday: 11:00 AM - 9:00 PM</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="bg-bw-orange/10 p-1 rounded-full mt-1">
-                          <Phone className="h-5 w-5 text-bw-orange" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium">Contact</h4>
-                          <a href="tel:+916291569512" className="text-bw-orange text-sm">+91 6291 569 512</a>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="mt-6">
-                      <Button 
-                        className="w-full bg-bw-orange hover:bg-bw-orange-dark" 
-                        asChild
-                      >
-                        <a href="https://maps.google.com/?q=Bengaluru,Karnataka" target="_blank" rel="noopener noreferrer">
-                          Get Directions
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -360,20 +284,20 @@ const Menu = () => {
             </div>
             
             <div className="mb-6">
-              <label className="text-sm font-medium mb-2 block">Quantity (Minimum 15)</label>
+              <label className="text-sm font-medium mb-2 block">Quantity (Minimum 10)</label>
               <div className="flex items-center">
                 <button 
-                  onClick={() => quantity > 15 && setQuantity(quantity - 1)}
+                  onClick={() => quantity > 10 && setQuantity(quantity - 1)}
                   className="border rounded-l-lg px-3 py-2 hover:bg-gray-100"
-                  disabled={quantity <= 15}
+                  disabled={quantity <= 10}
                 >
                   -
                 </button>
                 <input 
                   type="number" 
-                  min="15"
+                  min="10"
                   value={quantity}
-                  onChange={(e) => setQuantity(Math.max(15, parseInt(e.target.value) || 15))}
+                  onChange={(e) => setQuantity(Math.max(10, parseInt(e.target.value) || 10))}
                   className="border-y w-16 py-2 text-center"
                 />
                 <button 
@@ -396,7 +320,7 @@ const Menu = () => {
               className="w-full bg-bw-orange hover:bg-bw-orange-dark"
               onClick={handleCheckout}
             >
-              Proceed to Payment
+              Proceed to Checkout
             </Button>
           </div>
         </div>

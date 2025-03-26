@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -84,7 +84,7 @@ const Navbar = () => {
             className="rounded-full px-4 border-bw-orange/40 text-bw-orange hover:bg-bw-orange/10"
             asChild
           >
-            <a href="mailto:biteywitey.official@gmail.com">
+            <a href="mailto:anirbandas1616@gmail.com">
               <Mail className="h-4 w-4 mr-2" />
               <span className="font-medium">Email Us</span>
             </a>
@@ -98,6 +98,15 @@ const Navbar = () => {
               <Phone className="h-4 w-4" />
               <span className="font-medium">Order Now</span>
             </a>
+          </Button>
+          <Button
+            variant="outline"
+            className="rounded-full p-2 border-bw-orange/40 text-bw-orange hover:bg-bw-orange/10"
+            asChild
+          >
+            <Link to="/checkout">
+              <ShoppingCart className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
 
@@ -137,13 +146,22 @@ const Navbar = () => {
             </Link>
           ))}
           
+          <Link
+            to="/checkout"
+            className="px-4 py-3 rounded-lg font-medium button-transition flex items-center"
+            onClick={closeMenu}
+          >
+            <ShoppingCart className="h-4 w-4 mr-2" />
+            Checkout
+          </Link>
+          
           <div className="flex flex-col gap-2 mt-2">
             <Button
               variant="outline"
               className="justify-center rounded-lg border-bw-orange/40 text-bw-orange hover:bg-bw-orange/10"
               asChild
             >
-              <a href="mailto:biteywitey.official@gmail.com">
+              <a href="mailto:anirbandas1616@gmail.com">
                 <Mail className="h-4 w-4 mr-2" />
                 <span className="font-medium">Email Us</span>
               </a>
